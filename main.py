@@ -33,7 +33,10 @@ def view_students(students):
         return
 
     for sid, info in students.items():
-        print(f"ID: {sid}, Name: {info['name']}, Age: {info['age']}, Course: {info['course']}")
+        print(
+            f"ID: {sid}, Name: {info['name']}, "
+            f"Age: {info['age']}, Course: {info['course']}"
+        )
 
 def update_student(students):
     student_id = input("Enter Student ID to update: ")
@@ -73,15 +76,4 @@ def main():
             add_student(students)
         elif choice == "2":
             view_students(students)
-        elif choice == "3":
-            update_student(students)
-        elif choice == "4":
-            delete_student(students)
-        elif choice == "5":
-            print("Exiting...")
-            break
-        else:
-            print("Invalid choice. Try again.")
-
-if __name__ == "__main__":
-    main()
+        elif choice == "
